@@ -1,5 +1,11 @@
 # pet-pet-gif
 
+# Quick patch to add TS and use fix building in edge cases
+Changes:
+- Uses Canvas v3
+- Uses https://www.npmjs.com/package/@skyra/gifenc instead of gifencoder
+- returns buffer
+
 https://www.npmjs.com/package/pet-pet-gif
 
 Given a square avatar, generate a petting gif (known as "petpet" or "pet the").

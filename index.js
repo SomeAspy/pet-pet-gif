@@ -1,7 +1,7 @@
 const path = require('path')
 const _ = require('lodash')
 
-const GIFEncoder = require('gifencoder')
+const { GifEncoder } = require('@skyra/gifenc');
 const Canvas = require('canvas')
 
 const FRAMES = 10
@@ -18,7 +18,7 @@ module.exports = async (avatarURL, options = {}) => {
     options = _.defaults(options, defaultOptions) // Fill in the default option values
 
     // Create GIF encoder
-    const encoder = new GIFEncoder(options.resolution, options.resolution)
+    const encoder = new GifEncoder(options.resolution, options.resolution)
 
     encoder.start()
     encoder.setRepeat(0)

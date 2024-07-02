@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@skyra/gifenc':
+        specifier: ^1.0.1
+        version: 1.0.1
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+
+packages:
+
+  '@skyra/gifenc@1.0.1':
+    resolution: {integrity: sha512-kxu65ZchumEKWnFwPwy+/T2+/lzQZtwK6f5VTG3OJIBqvfdyRyxrWvbeBHT6G8p6nBEuxSwyI3YXTv2koXvHVQ==}
+    engines: {node: '>=v14.18.0', npm: '>=7.24.2'}
+
+  lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+  tslib@2.6.3:
+    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+
+snapshots:
+
+  '@skyra/gifenc@1.0.1':
+    dependencies:
+      tslib: 2.6.3
+
+  lodash@4.17.21: {}
+
+  tslib@2.6.3: {}

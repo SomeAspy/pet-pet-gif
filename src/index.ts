@@ -1,35 +1,28 @@
-const path = require('path')
-const _ = require('lodash')
-
-const { GifEncoder } = require('@skyra/gifenc');
-const Canvas = require('canvas')
+import { GifEncoder } from "@skyra/gifenc"
+import { Canvas, createCanvas, Image, loadImage } from "canvas"
+import { resolve } from "path"
+import { buffer } from "stream/consumers"
 
 const FRAMES = 10
 
-const petGifCache = []
+const petGifCache: (Canvas | Image)[] = []
 
-const defaultOptions = {
-    resolution: 128,
-    delay: 20,
-    backgroundColor: null,
-}
-
-module.exports = async (avatarURL, options = {}) => {
-    options = _.defaults(options, defaultOptions) // Fill in the default option values
-
+export default async (avatarURL:string|Buffer, options:{"resolution":number, "delay":number, "backgroundColor":string|null} = {"resolution":128, "delay":20, "backgroundColor":null} ) => {
     // Create GIF encoder
     const encoder = new GifEncoder(options.resolution, options.resolution)
+
+    const outputStream = encoder.createReadStream();
 
     encoder.start()
     encoder.setRepeat(0)
     encoder.setDelay(options.delay)
-    encoder.setTransparent()
+    encoder.setTransparent(null)
 
     // Create canvas and its context
-    const canvas = Canvas.createCanvas(options.resolution, options.resolution)
+    const canvas = createCanvas(options.resolution, options.resolution)
     const ctx = canvas.getContext('2d')
 
-    const avatar = await Canvas.loadImage(avatarURL)
+    const avatar = await loadImage(avatarURL)
 
     // Loop and create each frame
     for (let i = 0; i < FRAMES; i++) {
@@ -47,14 +40,14 @@ module.exports = async (avatarURL, options = {}) => {
         const offsetX = (1 - width) * 0.5 + 0.1
         const offsetY = (1 - height) - 0.08
 
-        if (i == petGifCache.length) petGifCache.push(await Canvas.loadImage(path.resolve(__dirname, `img/pet${i}.gif`)))
+        if (i == petGifCache.length) petGifCache.push(await loadImage(resolve(import.meta.dirname, `../img/pet${i.toString()}.gif`)))
 
         ctx.drawImage(avatar, options.resolution * offsetX, options.resolution * offsetY, options.resolution * width, options.resolution * height)
-        ctx.drawImage(petGifCache[i], 0, 0, options.resolution, options.resolution)
+        ctx.drawImage(petGifCache[i]!, 0, 0, options.resolution, options.resolution)
 
         encoder.addFrame(ctx)
     }
 
     encoder.finish()
-    return encoder.out.getData()
+    return await buffer(outputStream)
 }

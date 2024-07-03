@@ -1,1 +1,1 @@
-export default function PetPetGif (avatarURL:string|Buffer, options?:{"resolution":number, "delay":number, "backgroundColor":string|null} ): Promise<Buffer>
+export default function petPetGif (avatarURL:string|Buffer, options?:{"resolution":number, "delay":number, "backgroundColor":string|null} ): Promise<Buffer>

@@ -11,12 +11,12 @@ importers:
       '@skyra/gifenc':
         specifier: ^1.0.1
         version: 1.0.1
+      '@someaspy/pet-pet-gif':
+        specifier: ^1.0.11
+        version: 1.0.11
       canvas:
         specifier: 3.0.0-rc2
         version: 3.0.0-rc2
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
     devDependencies:
       '@eslint/js':
         specifier: ^9.6.0
@@ -88,6 +88,9 @@ packages:
   '@skyra/gifenc@1.0.1':
     resolution: {integrity: sha512-kxu65ZchumEKWnFwPwy+/T2+/lzQZtwK6f5VTG3OJIBqvfdyRyxrWvbeBHT6G8p6nBEuxSwyI3YXTv2koXvHVQ==}
     engines: {node: '>=v14.18.0', npm: '>=7.24.2'}
+
+  '@someaspy/pet-pet-gif@1.0.11':
+    resolution: {integrity: sha512-gKCFXx3V+rVSwvc5T0Z8wNqhI46LTB4yTPO9vmMqP5W9/hxpm5B2QJye/kyrbc5p0VqDQAPS/nu55NPaQ+AIkw==}
 
   '@types/eslint@8.56.10':
     resolution: {integrity: sha512-Shavhk87gCtY2fhXDctcfS3e6FdxWkCx1iUZ9eEUbh7rTqlZT0/IzOkCOVt0fCjcFuZ9FPYfuezTBImfHCDBGQ==}
@@ -746,6 +749,12 @@ snapshots:
   '@skyra/gifenc@1.0.1':
     dependencies:
       tslib: 2.6.3
+
+  '@someaspy/pet-pet-gif@1.0.11':
+    dependencies:
+      '@skyra/gifenc': 1.0.1
+      canvas: 3.0.0-rc2
+      lodash: 4.17.21
 
   '@types/eslint@8.56.10':
     dependencies:

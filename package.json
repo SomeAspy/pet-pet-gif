@@ -1,6 +1,6 @@
 {
     "name": "@someaspy/pet-pet-gif",
-    "version": "1.0.11",
+    "version": "2.0.0",
     "description": "Given an avatar, generate a petting gif (known as \"petpet\" or \"pet the\").",
     "main": "dist/index.js",
     "type": "module",
@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aDu/pet-pet-gif.git"
+        "url": "git+https://github.com/SomeAspy/pet-pet-gif.git"
     },
     "keywords": [
         "petpet",
@@ -19,16 +19,16 @@
         "petting",
         "animation"
     ],
-    "author": "Alan Du",
+    "author": "Alan Du & Aiden B.",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/aDu/pet-pet-gif/issues"
+        "url": "https://github.com/SomeAspy/pet-pet-gif/issues"
     },
-    "homepage": "https://github.com/aDu/pet-pet-gif#readme",
+    "homepage": "https://github.com/SomeAspy/pet-pet-gif#readme",
     "dependencies": {
         "@skyra/gifenc": "^1.0.1",
-        "canvas": "3.0.0-rc2",
-        "lodash": "^4.17.21"
+        "@someaspy/pet-pet-gif": "^1.0.11",
+        "canvas": "3.0.0-rc2"
     },
     "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
     "devDependencies": {
@@ -38,5 +38,6 @@
         "eslint": "^9.6.0",
         "typescript": "^5.5.3",
         "typescript-eslint": "^7.15.0"
-    }
+    },
+    "types": "src/types.d.ts"
 }

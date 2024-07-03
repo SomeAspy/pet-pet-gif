@@ -7,7 +7,7 @@ const FRAMES = 10
 
 const petGifCache: (Canvas | Image)[] = []
 
-export default async (avatarURL:string|Buffer, options:{"resolution":number, "delay":number, "backgroundColor":string|null} = {"resolution":128, "delay":20, "backgroundColor":null} ) => {
+export default async function petPetGif(avatarURL:string|Buffer, options:{"resolution":number, "delay":number, "backgroundColor":string|null} = {"resolution":128, "delay":20, "backgroundColor":null} ) {
     // Create GIF encoder
     const encoder = new GifEncoder(options.resolution, options.resolution)
 

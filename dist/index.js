@@ -4,7 +4,7 @@ import { resolve } from "path";
 import { buffer } from "stream/consumers";
 const FRAMES = 10;
 const petGifCache = [];
-export default async (avatarURL, options = { "resolution": 128, "delay": 20, "backgroundColor": null }) => {
+export default async function petPetGif(avatarURL, options = { "resolution": 128, "delay": 20, "backgroundColor": null }) {
     const encoder = new GifEncoder(options.resolution, options.resolution);
     const outputStream = encoder.createReadStream();
     encoder.start();
@@ -33,4 +33,4 @@ export default async (avatarURL, options = { "resolution": 128, "delay": 20, "ba
     }
     encoder.finish();
     return await buffer(outputStream);
-};
+}

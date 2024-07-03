@@ -38,5 +38,9 @@
         "typescript": "^5.5.3",
         "typescript-eslint": "^7.15.0"
     },
-    "types": "src/types.d.ts"
+    "types": "src/types.d.ts",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    }
 }

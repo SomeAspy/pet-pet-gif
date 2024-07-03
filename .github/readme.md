@@ -8,7 +8,7 @@ Changes:
 - Uses <https://www.npmjs.com/package/@skyra/gifenc> instead of gifencoder
 - returns buffer
 
-<https://www.npmjs.com/package/pet-pet-gif>
+<https://www.npmjs.com/package/@SomeAspy/pet-pet-gif>
 
 Given a square avatar, generate a petting gif (known as "petpet" or "pet the").
 
@@ -26,37 +26,17 @@ You can also try it out on <https://hellist.com/discord> (with the `;pet` comman
 
 ## Usage
 
-`npm i -S pet-pet-gif`
+`pnpm i pet-pet-gif`
 
-Two examples in one (using [Eris](https://www.npmjs.com/package/eris) in the example but should be similar for other Discord Bot API wrappers).
+Basic usage:
 
 ```ts
-const petPetGif = require('pet-pet-gif')
+import petPetGif from "./index.js"
+import { writeFileSync } from "fs"
 
-...
 
-const petCommandExample = async (param) => {
-    let animatedGif = await petPetGif(param.member.avatarURL)
-
-    // Example #1: Reply with the image attached
-    bot.createMessage(param.channel.id,
-        {
-          "embed": {
-            "image": {
-              "url": 'attachment://pet.gif',
-            }
-          }
-        },
-        {
-            file: animatedGif,
-            name: 'pet.gif'
-        })
-
-    // Example #2: Or you could save it somewhere.
-    fs.writeFile('idi_nahui.gif', animatedGif, function (err) {
-        console.log('Cyka blyat! An error occurred!')
-    })
-}
+const animatedGif = await petPetGif("https://avatars.githubusercontent.com/u/33640860?v=4")
+writeFileSync('petted.gif', animatedGif)
 ```
 
 ## Options
@@ -64,11 +44,11 @@ const petCommandExample = async (param) => {
 You can optionally specify the `options` argument (each field in the `options` field is optional).
 
 ```ts
-let animatedGif = await petPetGif(param.member.avatarURL, {
-    resolution: 128, // The width (or height) of the generated gif
-    delay: 20, // Delay between each frame in milliseconds. Defaults to 20.
-    backgroundColor: "red", // Other values could be the string "rgba(123, 233, 0, 0.5)". Defaults to null - i.e. transparent.
-})
+import petPetGif from "./index.js"
+import { writeFileSync } from "fs"
+
+const animatedGif = await petPetGif("https://avatars.githubusercontent.com/u/33640860?v=4", {resolution: 128, delay: 20, backgroundColor: "red"})
+writeFileSync('petted.gif', animatedGif)
 ```
 
 ## Feature requests

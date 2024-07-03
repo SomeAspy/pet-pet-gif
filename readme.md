@@ -1,6 +1,8 @@
 # pet-pet-gif
 
-## Quick patch to add TS and use fix building in edge cases
+## Quick patch to add TS and fix building in edge cases
+
+Install using `pnpm i @someaspy/pet-pet-gif`
 
 Changes:
 
@@ -25,10 +27,6 @@ Further meme info: <https://knowyourmeme.com/memes/pet-the-x-petthe-emotes>
 You can also try it out on <https://hellist.com/discord> (with the `;pet` command).
 
 ## Usage
-
-`pnpm i pet-pet-gif`
-
-Basic usage:
 
 ```ts
 import petPetGif from "./index.js"
@@ -58,4 +56,4 @@ writeFileSync('petted.gif', animatedGif)
 
 Feel free to submit feature requests by [clicking here](https://github.com/someaspy/pet-pet-gif/issues/new) - I'd probably be happy to implement them!
 
-Or make a pull request :).
+Or make a pull request :)

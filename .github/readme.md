@@ -47,7 +47,10 @@ You can optionally specify the `options` argument (each field in the `options` f
 import petPetGif from "./index.js"
 import { writeFileSync } from "fs"
 
-const animatedGif = await petPetGif("https://avatars.githubusercontent.com/u/33640860?v=4", {resolution: 128, delay: 20, backgroundColor: "red"})
+const animatedGif = await petPetGif(
+    "https://avatars.githubusercontent.com/u/33640860?v=4",
+    {resolution: 128, delay: 20, backgroundColor: "red"}
+)
 writeFileSync('petted.gif', animatedGif)
 ```
 

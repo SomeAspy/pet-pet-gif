@@ -32,7 +32,6 @@ You can also try it out on <https://hellist.com/discord> (with the `;pet` comman
 import petPetGif from "./index.js"
 import { writeFileSync } from "fs"
 
-
 const animatedGif = await petPetGif("https://avatars.githubusercontent.com/u/33640860?v=4")
 writeFileSync('petted.gif', animatedGif)
 ```

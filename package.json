@@ -1,12 +1,13 @@
 {
     "name": "@someaspy/pet-pet-gif",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "Given an avatar, generate a petting gif (known as \"petpet\" or \"pet the\").",
     "main": "dist/index.js",
     "type": "module",
     "scripts": {
         "build": "tsc",
-        "lint": "eslint \"**/*.ts\" ."
+        "lint": "biome check",
+        "lint:fix": "biome check --write"
     },
     "repository": {
         "type": "git",
@@ -27,16 +28,13 @@
     "homepage": "https://github.com/SomeAspy/pet-pet-gif#readme",
     "dependencies": {
         "@skyra/gifenc": "^1.0.1",
-        "canvas": "3.0.0-rc2"
+        "canvas": "3.1.1"
     },
-    "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
+    "packageManager": "pnpm@10.12.2+sha512.a32540185b964ee30bb4e979e405adc6af59226b438ee4cc19f9e8773667a66d302f5bfee60a39d3cac69e35e4b96e708a71dd002b7e9359c4112a1722ac323f",
     "devDependencies": {
-        "@eslint/js": "^9.6.0",
-        "@types/eslint__js": "^8.42.3",
-        "@types/node": "^20.14.9",
-        "eslint": "^9.6.0",
-        "typescript": "^5.5.3",
-        "typescript-eslint": "^7.15.0"
+        "@biomejs/biome": "^2.0.5",
+        "@types/node": "^24.0.3",
+        "typescript": "^5.8.3"
     },
     "types": "src/types.d.ts",
     "publishConfig": {

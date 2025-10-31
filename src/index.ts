@@ -23,7 +23,6 @@ export default async function petPetGif(
 	encoder.start();
 	encoder.setRepeat(0);
 	encoder.setDelay(options.delay);
-	encoder.setTransparent(null);
 
 	// Create canvas and its context
 	const canvas = createCanvas(options.resolution, options.resolution);

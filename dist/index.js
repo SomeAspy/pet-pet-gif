@@ -10,7 +10,7 @@ export default async function petPetGif(avatarURL, options = { resolution: 128, 
     encoder.start();
     encoder.setRepeat(0);
     encoder.setDelay(options.delay);
-    encoder.setTransparent(null);
+    encoder.setTransparent(0);
     const canvas = createCanvas(options.resolution, options.resolution);
     const ctx = canvas.getContext("2d");
     const avatar = await loadImage(avatarURL);

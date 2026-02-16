@@ -1,7 +1,7 @@
 import { resolve } from "node:path";
 import { buffer } from "node:stream/consumers";
+import { createCanvas, loadImage, } from "@napi-rs/canvas";
 import { GifEncoder } from "@skyra/gifenc";
-import { createCanvas, loadImage } from "canvas";
 const FRAMES = 10;
 const petGifCache = [];
 export default async function petPetGif(avatarURL, options = { resolution: 128, delay: 20, backgroundColor: null }) {

@@ -1,7 +1,12 @@
 import { resolve } from "node:path";
 import { buffer } from "node:stream/consumers";
+import {
+	type Canvas,
+	createCanvas,
+	type Image,
+	loadImage,
+} from "@napi-rs/canvas";
 import { GifEncoder } from "@skyra/gifenc";
-import { type Canvas, createCanvas, type Image, loadImage } from "canvas";
 
 const FRAMES = 10;
 
@@ -12,7 +17,7 @@ export default async function petPetGif(
 	options: {
 		resolution: number;
 		delay: number;
-		backgroundColor: string | null;
+		backgroundColor?: string | null;
 	} = { resolution: 128, delay: 20, backgroundColor: null },
 ) {
 	// Create GIF encoder

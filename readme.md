@@ -6,7 +6,7 @@ Install using `pnpm i @someaspy/pet-pet-gif`
 
 Changes:
 
-- Uses Canvas v3
+- Uses [@napi-rs/canvas](https://www.npmjs.com/package/@napi-rs/canvas) instead of canvas
 - Uses <https://www.npmjs.com/package/@skyra/gifenc> instead of gifencoder
 - returns buffer
 

@@ -1,6 +1,6 @@
 # pet-pet-gif
 
-## Quick patch to add TS and fix building in edge cases
+## Updates the now (seemingly) abandoned [pet-pet-gif](https://github.com/aDu/pet-pet-gif)
 
 Install using `pnpm i @someaspy/pet-pet-gif`
 
@@ -9,6 +9,7 @@ Changes:
 - Uses [@napi-rs/canvas](https://www.npmjs.com/package/@napi-rs/canvas) instead of canvas
 - Uses <https://www.npmjs.com/package/@skyra/gifenc> instead of gifencoder
 - returns buffer
+- Added types
 
 <https://www.npmjs.com/package/@SomeAspy/pet-pet-gif>
 
@@ -23,8 +24,6 @@ Further meme info: <https://knowyourmeme.com/memes/pet-the-x-petthe-emotes>
 ## Demo
 
 ![Input](/example/input.png) → ![Output](/example/output.gif)
-
-You can also try it out on <https://hellist.com/discord> (with the `;pet` command).
 
 ## Usage
 

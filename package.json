@@ -1,6 +1,6 @@
 {
     "name": "@someaspy/pet-pet-gif",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "Given an avatar, generate a petting gif (known as \"petpet\" or \"pet the\").",
     "main": "dist/index.js",
     "type": "module",
@@ -30,11 +30,10 @@
         "@napi-rs/canvas": "^1.0.3",
         "@skyra/gifenc": "^1.0.1"
     },
-    "packageManager": "pnpm@11.0.0-dev.1005+sha512.91f84a392eea348ea4852a182912d2520273a4336f933b78cc44bc931eb999923c097e9433a9b355adc1f725725ea99082fc9f032a559df832632e764c92c798",
     "devDependencies": {
-        "@biomejs/biome": "^2.4.1",
-        "@types/node": "^25.2.3",
-        "typescript": "^5.9.3"
+        "@biomejs/biome": "^2.5.7",
+        "@types/node": "^26.2.0",
+        "typescript": "^7.0.2"
     },
     "types": "src/types.d.ts",
     "publishConfig": {

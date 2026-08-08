@@ -8,6 +8,7 @@ on:
 permissions:
   id-token: write
   contents: read
+  packages: write
 
 jobs:
   publish:
@@ -18,8 +19,22 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: "26"
-          registry-url: "https://registry.npmjs.org"
           package-manager-cache: false
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm publish --provenance
+
+      # Publish to NPM
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "26"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm publish --provenance --access public
+
+      # Publish to GitHub
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "26"
+          registry-url: "https://npm.pkg.github.com"
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,6 @@
 {
     "name": "@someaspy/pet-pet-gif",
-    "version": "2.2.2",
+    "version": "2.2.3",
     "description": "Given an avatar, generate a petting gif (known as \"petpet\" or \"pet the\").",
     "main": "dist/index.js",
     "type": "module",
@@ -37,7 +37,6 @@
     },
     "types": "src/types.d.ts",
     "publishConfig": {
-        "registry": "https://registry.npmjs.org",
         "access": "public"
     }
 }

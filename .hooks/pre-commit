@@ -1,5 +1,7 @@
 #!/bin/sh
-set -e 
+set -e
 
-pnpm run build
-git add dist
+rm -rf node_modules
+npm i
+npm run build
+git add dist package-lock.json

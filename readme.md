@@ -1,4 +1,4 @@
-# pet-pet-gif
+# @someaspy/pet-pet-gif
 
 ## Updates the now (seemingly) abandoned [pet-pet-gif](https://github.com/aDu/pet-pet-gif)
 

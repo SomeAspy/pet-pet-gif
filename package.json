@@ -27,7 +27,7 @@
     },
     "homepage": "https://github.com/SomeAspy/pet-pet-gif#readme",
     "dependencies": {
-        "@napi-rs/canvas": "^1.0.3",
+        "@napi-rs/canvas": "^1.0.8",
         "@skyra/gifenc": "^1.0.1"
     },
     "devDependencies": {
